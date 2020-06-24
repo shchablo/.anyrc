@@ -1,30 +1,27 @@
+autocmd VimEnter * set t_ut=
+
 call plug#begin('~/.vim/plugged')
     Plug 'vim-latex/vim-latex'
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+"    Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
     Plug 'majutsushi/tagbar'
     Plug 'sjl/gundo.vim'
     Plug 'easymotion/vim-easymotion'
     
-    Plug 'rhysd/vim-clang-format'   
-call plug#end()
-
+    Plug 'rhysd/vim-clang-format'    
+    call plug#end()
 " *** КОНФИГУРАЦИЯ VIM ***
 
 " * Плагины {{{
-	
-	"NERDTree
-	nnoremap <F3> :NERDTreeToggle<CR>
-   
-	"Tagbar
-	nmap <F8> :TagbarToggle<CR> 
-   
-	"Gundo 
-	nnoremap <F5> :GundoToggle<CR>
-    
-" * }}}
 
+"NERDTree
+nnoremap <F3> :NERDTreeToggle<CR>
+"Tagbar
+nmap <F8> :TagbarToggle<CR>
+"Gundo
+nnoremap <F5> :GundoToggle<CR>
 " * Общие {{{
+
 " Отключение совместимости настроек с Vi
 set nocompatible
 
@@ -35,7 +32,7 @@ set lazyredraw
 "set hidden
 
 " Highlight search results
-set hlsearch
+"set hlsearch
 
 " Ignore case in search patterns
 "set ignorecase
@@ -60,9 +57,19 @@ set noswapfile
 
 " Disable error messages
 set novb
+
+" Скроллинг текста
+"set scrolljump=7
+"set scrolloff=7
+
+" Поддержка мыши
+"set mouse=a
+"set mousemodel=popup
+
 " }}}
 
 " * Кодировки {{{
+
 " Кодировка текста по умолчанию
 set termencoding=utf-8
 
@@ -77,7 +84,7 @@ menu Encoding.koi8-r       :e! ++enc=koi8-r<CR>
 menu Encoding.utf-8        :e! ++enc=utf-8 <CR>
 map <C-C> :emenu Encoding.<TAB>
 
-" * }}}
+" }}}
 
 " Внешний вид {{{
 
@@ -106,7 +113,7 @@ set ch=1
 set showcmd showmatch showmode
 
 " Подсветка строки, в которой находится в данный момент курсор
-set cursorline
+"set cursorline
 
 " Формат строки состояния
 set laststatus=3
@@ -115,16 +122,15 @@ set laststatus=3
 set nowrap
 
 " See which lines are longer than 80 characters.
-set colorcolumn=81
-hi colorcolumn ctermbg=0
+"set colorcolumn=81
+"hi colorcolumn ctermbg=0
 
 "set t_Co=256
 
 " Табуляция равна 2-ем пробелам
-set tabstop=2 
-set softtabstop=2 
+set tabstop=4 
+set softtabstop=4 
 set expandtab
-
 "set smarttab
 set textwidth=79
 set shiftround
@@ -156,7 +162,6 @@ function SWITCHFOLD()
         return
     endif
 endfunction
-"=============================================================================="
 
 "set foldenable " отклключить фолдинг по умолчанию
 set foldmethod=syntax " определять блоки на основе синтаксиса файла
@@ -165,9 +170,11 @@ set foldnestmax=4       "deepest fold is 4 levels
 "set foldcolumn=10 " показать полосу для управления сворачиванием
 "set foldlevel=1 " Первый уровень вложенности открыт, остальные закрыты
 "set foldopen=all " автоматическое открытие сверток при заходе в них
-"set nocompatible
+set nocompatible
 "hi Folded ctermbg=242
 " }}}
 
 " Горячие клавиши {{{
+
 " }}}
+
