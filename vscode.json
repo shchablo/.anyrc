@@ -1,0 +1,68 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "workbench.colorTheme": "Default Dark Modern",
+  "cmake.configureOnOpen": true,
+  "editor.parameterHints.enabled": false,
+  "editor.rulers": [
+    120
+  ],
+  "vim.foldfix": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "editor.detectIndentation": false,
+  "editor.minimap.enabled": false,
+"cmake.options.statusBarVisibility": "compact",
+"explorer.confirmDelete": false,
+"cmake.additionalCompilerSearchDirs": [
+    "C:/msys64/mingw32/bin",
+    "C:/msys64/mingw64/bin",
+    "C:/msys64/clang32/bin",
+    "C:/msys64/clang64/bin",
+    "C:/msys64/clangarm64/bin",
+    "C:/msys64/ucrt64/bin"
+],
+"cmake.showOptionsMovedNotification": false,
+"cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+],
+"window.openFilesInNewWindow": "default",
+"git.openRepositoryInParentFolders": "never",
+"workbench.sideBar.location": "right",
+"diffEditor.ignoreTrimWhitespace": false,
+"editor.accessibilitySupport": "off",
+}
+
